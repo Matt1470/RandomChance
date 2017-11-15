@@ -9,9 +9,83 @@
 			alert("wooo")
 		})
 
-          $('.hide').click(function(){
+        $('.hide').click(function(){
               $(".hide").hide()
-          })
+        })
+
+        $('.show').click(function(){
+            $(".hide").show()
+        })
+
+        $('.toggle').click(function(){
+			$(".hide").toggle()
+        })
+
+        $('.slideDown').click(function(){
+            $(".hidden").slideDown()
+        })
+
+        $('.slideUp').click(function(){
+            $("#slideUp").slideUp()
+        })
+
+        $('.slideToggle').click(function(){
+            $("#slideToggle").slideToggle()
+        })
+
+        $('.fadeIn').click(function(){
+            $("#fadeIn").fadeIn()
+        })
+
+        $('.fadeOut').click(function(){
+            $("#fadeOut").fadeOut()
+        })
+
+        $('.addClass').click(function(){
+            $("#addClass").addClass("green")
+        })
+
+        $('.before').click(function(){
+            $("#before").before("<h1>woot</h1>")
+        })
+
+        $('.after').click(function(){
+            $("#after").after("<h1>whaddup</h1>")
+        })
+
+        $('.append').click(function(){
+            $("#append").append("<span>more content</span>")
+        })
+
+        $('.html').click(function(){
+            $("#html").html("<h3>hello</h3>")
+        })
+
+        $('.attr').click(function(){
+            var classVal=$("#attr").attr("class")
+            $("#attr").append(classVal)
+        })
+
+        $('.attr2').click(function(){
+            $("#attr").attr("class","red")
+        })
+
+        $('.val').click(function(){
+			console.log($("#val").val())
+		})
+		$('.val2').click(function(){
+			$('#val').val("minh")
+		})
+		$('.text').click(function(){
+			$("#text").text("hello")
+		})
+		var ele = $("#data")
+		$.data(ele, "name", "minh")
+		$('.data').click(function(){
+			var value = $.data(ele,"name")
+			$("#data").after(value)
+		})
+
       })
     </script>
 	<style type="text/css">
@@ -32,6 +106,118 @@
     <legend>Hide</legend>
     <p>Hides an element</p>
     <button class="hide">Click to hide this button</button>
-    </fieldset>
+</fieldset>
+
+<fieldset>
+    <legend>Show</legend>
+    <p>Shows a hidden function</p>
+    <button class="show">Click to show previously hidden button</button>
+</fieldset>
+
+<fieldset>
+    <legend>toggle</legend>
+    <p>toggles between show and hide</p>
+    <button class="toggle">Click here to toggle between show and hide</button>
+</fieldset>
+
+<fieldset>
+    <legend>Slide Down</legend>
+    <p>provides a slide down animation when showing</p>
+    <p class="hidden" hidden>I was Hiding</p>
+    <button class="slideDown">Click to see a slide down hidden element</button>
+</fieldset>
+
+<fieldset>
+    <legend>Slide Up</legend>
+    <p>Hides an elements by sliding up</p>
+    <p id="slideUp">I was hiding</p>
+    <button class="slideUp">Click to show previously hidden button</button>
+</fieldset>
+
+<fieldset>
+    <legend>SlideToggle</legend>
+    <p>switches back and forth between toggled element</p>
+    <p id="slideToggle">I am the toggled element</p>
+    <button class="slideToggle">Click to toggle</button>
+</fieldset>
+
+<fieldset>
+    <legend>FadeIn</legend>
+    <p>displays the matched elements by fading them to opaque</p>
+    <p id="fadeIn" hidden>Fades this element</p>
+    <button class="fadeIn">Click to fade</button>
+</fieldset>
+
+<fieldset>
+    <legend>fadeOut</legend>
+    <p>fades an element from showing to hidden</p>
+    <p id="fadeOut">Imma hide now</p>
+    <button class="fadeOut">CLick to hide</button>
+</fieldset>
+
+<fieldset>
+    <legend>addClass</legend>
+    <p>Adds a specific class to an element</p>
+    <p id="addClass">I'm green now</p>
+    <button class="addClass">Turn that bad boy green</button>
+</fieldset>
+
+<fieldset>
+    <legend>before</legend>
+    <p>This tag places content before your tag</p>
+    <p id="before">Something will be placed before me</p>
+    <button class="before">Click to place before</button>
+</fieldset>
+
+<fieldset>
+    <legend>after</legend>
+    <p>this tag places content after your tag</p>
+    <p id ="after">something will be placed after me</p>
+    <button class="after">Click to place after</button>
+</fieldset>
+
+<fieldset>
+    <legend>append</legend>
+    <p>This tag adds content within the element</p>
+    <p id="append">I'm about to get appended</p>
+    <button class="append">Click to append</button>
+</fieldset>
+
+<fieldset>
+    <legend>html</legend>
+    <p>replaces the html within an element</p>
+    <div id="html">I am a div<p>I am a p within that div</p></div>
+    <button class="html">Click to replace</button>
+</fieldset>
+
+<fieldset>
+    <legend>attr</legend>
+    <p>retrieves or sets an attribute of an element</p>
+    <p class="green" id="attr">I am an element that is green. class=</p>
+    <button class="attr">Click to retrieve the class</button>
+    <button class="attr2">click to set the class</button>
+</fieldset>
+
+<fieldset>
+	<legend>val</legend>
+    <p>Retreives or set a value of an input</p>
+	<input type="text" name="name" id="val">
+	<button class="val">Click to retreive the value of the input. Look in your console</button>
+	<button class="val2">click to change the value of the input to "minh"</button>
+</fieldset>
+<fieldset>
+	<legend>text</legend>
+	<p>replace the text of an element</p>
+	<p id="text">My text will be replaced</p>
+	<button class="text">Click to replace the text with "hello"</button>
+</fieldset>
+<fieldset>
+	<legend>data</legend>
+	<p>stores a data value in that element(hidden in javascript)</p>
+	<p id="data">I have a name hidden in me. What is it?</p>
+	<button class="data">Click to retreive the data</button>
+</fieldset>
+
+
 </body>
 </html>

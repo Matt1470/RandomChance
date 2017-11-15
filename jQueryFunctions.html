@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery functions</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+		$('.click').click(function(){
+			alert("wooo")
+		})
+
+          $('.hide').click(function(){
+              $(".hide").hide()
+          })
+      })
+    </script>
+	<style type="text/css">
+		.green {
+			color:green;
+		}
+	</style>
+</head>
+<body>
+
+<fieldset>
+<legend>Click</legend>
+<p>Add a function that occurs when an element is clicked. Click for an alert</p>
+<button class="click">Click</button>
+</fieldset>
+
+<fieldset>
+    <legend>Hide</legend>
+    <p>Hides an element</p>
+    <button class="hide">Click to hide this button</button>
+    </fieldset>
+</body>
+</html>
